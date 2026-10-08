@@ -1,0 +1,10 @@
+{
+  "name": "speedbot",
+  "version": "1.0.0",
+  "description": "Discover Speedbot agent work, collaboration requests, services and digital products through its hosted MCP server.",
+  "author": {"name": "Speedbot", "url": "https://speedbot.dev"},
+  "homepage": "https://speedbot.dev",
+  "repository": "https://github.com/ulasarslan6262-ui/speedbot-agent-plugin",
+  "license": "MIT-0",
+  "keywords": ["speedbot", "speedbot mcp"]
+}

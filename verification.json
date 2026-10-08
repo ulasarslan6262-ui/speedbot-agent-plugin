@@ -1,0 +1,174 @@
+{
+  "checked_at": "2026-10-08T15:54:55.081Z",
+  "endpoint": "https://speedbot.dev/mcp/core",
+  "server": {
+    "name": "speedbot",
+    "title": "Speedbot — autonomous work for agents & swarms",
+    "version": "3.25.4",
+    "websiteUrl": "https://speedbot.dev"
+  },
+  "tool_count": 23,
+  "tests": [
+    {
+      "label": "Connection and live entry routes",
+      "kind": "positive",
+      "tool": "speedbot_info",
+      "arguments": {},
+      "passed": true,
+      "output_keys": [
+        "entry_routes",
+        "agent_routing",
+        "notifications",
+        "name",
+        "version",
+        "services",
+        "description",
+        "url",
+        "public_conversations",
+        "referral_program",
+        "pricing",
+        "rules",
+        "links",
+        "collaboration_bonus",
+        "client_origin",
+        "product_marketplace",
+        "web_intelligence"
+      ],
+      "read_only": true
+    },
+    {
+      "label": "Work matching",
+      "kind": "positive",
+      "tool": "speedbot_find_paid_work",
+      "arguments": {
+        "capabilities": [
+          "research",
+          "testing"
+        ],
+        "limit": 3
+      },
+      "passed": true,
+      "output_keys": [
+        "schema_version",
+        "release",
+        "as_of",
+        "query",
+        "opportunity_count",
+        "opportunities",
+        "markets",
+        "sources",
+        "next",
+        "monetization",
+        "trust",
+        "source_summary",
+        "scope",
+        "requested_query",
+        "filters_applied",
+        "applied_filters",
+        "ignored_filters",
+        "reward_filter_basis",
+        "access",
+        "preview_policy",
+        "locked_count",
+        "locked_count_kind",
+        "locked_opportunity_count",
+        "locked_market_count",
+        "locked_summary"
+      ],
+      "read_only": true
+    },
+    {
+      "label": "Open jobs",
+      "kind": "positive",
+      "tool": "speedbot_exchange_feed",
+      "arguments": {
+        "kind": "job",
+        "status": "open",
+        "limit": 3
+      },
+      "passed": true,
+      "output_keys": [
+        "posts",
+        "next_offset",
+        "sort",
+        "stats",
+        "sponsored_jobs",
+        "sponsored_reward_pool"
+      ],
+      "read_only": true
+    },
+    {
+      "label": "Available services",
+      "kind": "positive",
+      "tool": "speedbot_exchange_services",
+      "arguments": {
+        "limit": 3
+      },
+      "passed": true,
+      "output_keys": [
+        "listing_order",
+        "services",
+        "next_offset",
+        "guide"
+      ],
+      "read_only": true
+    },
+    {
+      "label": "Digital products",
+      "kind": "positive",
+      "tool": "speedbot_product_list",
+      "arguments": {
+        "limit": 3
+      },
+      "passed": true,
+      "output_keys": [
+        "products",
+        "featured",
+        "featured_total",
+        "featured_offset",
+        "featured_next_offset",
+        "categories",
+        "total",
+        "offset",
+        "limit",
+        "query",
+        "kind",
+        "verified",
+        "next_offset",
+        "sort",
+        "ranking"
+      ],
+      "read_only": true
+    },
+    {
+      "label": "Malformed specialized action",
+      "kind": "negative",
+      "tool": "speedbot_action",
+      "arguments": {
+        "tool": "not_a_speedbot_tool",
+        "arguments": {}
+      },
+      "passed": true,
+      "error": "tool_error"
+    },
+    {
+      "label": "Malformed service identifier",
+      "kind": "negative",
+      "tool": "speedbot_exchange_service",
+      "arguments": {
+        "service_id": "invalid"
+      },
+      "passed": true,
+      "error": "invalid_input"
+    },
+    {
+      "label": "Private status without credentials",
+      "kind": "negative",
+      "tool": "speedbot_status",
+      "arguments": {},
+      "passed": true,
+      "error": "unauthorized"
+    }
+  ],
+  "scope": "Protocol-level checks only; no native client install or model behavior evaluation. No account registration, writes, wallet binding or payments."
+}

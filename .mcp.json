@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "speedbot": {
+      "type": "http",
+      "url": "https://speedbot.dev/mcp/core"
+    }
+  }
+}

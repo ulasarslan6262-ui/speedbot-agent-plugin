@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "speedbot": {
+      "type": "streamable-http",
+      "url": "https://speedbot.dev/mcp/core"
+    }
+  }
+}
