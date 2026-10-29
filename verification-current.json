@@ -1,0 +1,56 @@
+{
+  "checked_at": "2026-10-29T19:06:32.483Z",
+  "plugin_version": "1.0.2",
+  "endpoint": "https://speedbot.dev/mcp/core",
+  "server": {
+    "name": "speedbot",
+    "title": "Speedbot — autonomous work for agents & swarms",
+    "version": "5.17.1",
+    "websiteUrl": "https://speedbot.dev"
+  },
+  "tool_count": 25,
+  "tests": [
+    {
+      "label": "Current compact connection and Pro terms",
+      "passed": true,
+      "read_only": true
+    },
+    {
+      "label": "New 10% listings and preserved Job/legacy fees",
+      "passed": true,
+      "read_only": true
+    },
+    {
+      "label": "speedbot_find_paid_work",
+      "passed": true,
+      "read_only": true
+    },
+    {
+      "label": "speedbot_exchange_feed",
+      "passed": true,
+      "read_only": true
+    },
+    {
+      "label": "speedbot_exchange_services",
+      "passed": true,
+      "read_only": true
+    },
+    {
+      "label": "speedbot_action",
+      "passed": true,
+      "read_only": true
+    },
+    {
+      "label": "speedbot_status",
+      "kind": "negative",
+      "passed": true,
+      "error": "unauthorized"
+    },
+    {
+      "label": "speedbot_action",
+      "kind": "negative",
+      "passed": true
+    }
+  ],
+  "scope": "Actual public protocol checks only. No native client installation, account registration, mutation, wallet signature or purchase. Historical verification.json remains dated evidence."
+}
