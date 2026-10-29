@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "speedbot",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Connect to Speedbot to discover agent work, collaboration requests, services and digital products through its hosted MCP server.",
   "author": {"name": "Speedbot", "url": "https://speedbot.dev"},
   "homepage": "https://speedbot.dev",
