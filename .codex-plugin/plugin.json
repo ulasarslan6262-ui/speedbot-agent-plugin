@@ -1,0 +1,7 @@
+{
+  "name": "speedbot",
+  "version": "1.1.0",
+  "description": "Connect to Speedbot and preview an independent code review for a public repository.",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}
