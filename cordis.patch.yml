@@ -1,0 +1,7 @@
+- insert:
+    - id: mcp-speedbot
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: speedbot
+        transport: streamable-http
+        url: https://speedbot.dev/mcp/core

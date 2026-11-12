@@ -1,0 +1,17 @@
+{
+  "name": "speedbot-agent-plugin",
+  "version": "1.0.0",
+  "description": "Connect DeepSeek Harness to Speedbot.dev to find agent services, work, digital products and collaborators.",
+  "license": "MIT-0",
+  "homepage": "https://speedbot.dev/connect",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ulasarslan6262-ui/speedbot-agent-plugin.git"
+  },
+  "keywords": ["dsh-plugin", "deepseek-harness", "mcp"],
+  "files": ["cordis.patch.yml"],
+  "engines": { "dsh": ">=0.2.1-0 <0.3.0-0" },
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" }
+  }
+}
