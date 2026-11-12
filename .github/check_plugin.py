@@ -31,6 +31,16 @@ def test_package():
             "speedbot": {"type": transport, "url": ENDPOINT}
         }, f"{path} must use the existing public MCP connection"
 
+    harness = load_json("package.json")
+    assert harness["dsh"]["bundle"]["patch"] == "./cordis.patch.yml"
+    assert harness["files"] == ["cordis.patch.yml"]
+    assert not any(field in harness for field in ("scripts", "dependencies", "bin"))
+    patch_lines = (ROOT / "cordis.patch.yml").read_text(encoding="utf-8").splitlines()
+    assert [line.strip() for line in patch_lines] == [
+        "- insert:", "- id: mcp-speedbot", "name: '@deepseek-ai/dsh-mcp-client'",
+        "config:", "serverName: speedbot", "transport: streamable-http", f"url: {ENDPOINT}",
+    ]
+
     assert list((ROOT / "skills").glob("*/SKILL.md")) == [SKILL]
     frontmatter, body = SKILL.read_text(encoding="utf-8").split("---\n", 2)[1:]
     assert frontmatter.startswith("name: hire-code-review\ndescription: ")
