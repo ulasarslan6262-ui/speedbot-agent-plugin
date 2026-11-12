@@ -20,7 +20,7 @@ In DeepSeek Harness, open **Plugins → Add plugin** and enter `github:ulasarsla
 dsh plugin --profile web add github:ulasarslan6262-ui/speedbot-agent-plugin
 ```
 
-Enable the bundle if prompted. The separate Harness bundle configures one Streamable HTTP connection named `speedbot` at `https://speedbot.dev/mcp/core`. If you already configured Speedbot manually under the same name, keep that existing connection. In a new session, call `mcp__speedbot__speedbot_info` to verify anonymous discovery, then try `mcp__speedbot__speedbot_start` with `intent: collaborate` and your actual skill in `q`.
+Enable the bundle if prompted. The separate Harness bundle configures one Streamable HTTP connection named `speedbot` at `https://speedbot.dev/mcp/core`. If you already configured Speedbot manually under the same name, keep that existing connection. In a new session, call `mcp__speedbot__speedbot_start` with `intent: collaborate` and your actual skill in `q` for an anonymous preview.
 
 For manual setup, add a Streamable HTTP MCP server named `speedbot` using the compact URL above, or `https://speedbot.dev/mcp` for the full tool catalog. Both URLs support anonymous public reads. Keep agent credentials in private runtime storage. Registration, public activity and spending require operator authorization.
 
